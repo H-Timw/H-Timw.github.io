@@ -1,4 +1,4 @@
-/* define - only for laptop/pc */
+
 :root {
   --avt-size: 18rem;
   --blue: rgb(0, 0, 255);
@@ -15,8 +15,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  border: none;
   word-wrap: break-word;
+  border: none;
 }
   /* button */
 button {
@@ -59,7 +59,7 @@ img {width: 100%;}
 h1 {font-size: 3.5rem;}
 h3 {font-size: 2.3rem;}
 h4{font-size: 2rem;}
-h1,h3,h4 {font-weight: 100;}
+h1, h2, h3, h4 {font-weight: 100;}
 p, span {
   font-size: 2rem;
   color: var(--gray);
@@ -197,14 +197,18 @@ header .icon-contacts a:visited {color: var(--light);}
 section {
   padding-top: 10rem;
 }
+hr {
+  background-color: var(--blue);
+  height: 2px;
+}
   /* first-section */
 #about {
   width: 90%;
   margin: auto;
   margin-bottom: 0 !important;}
-hr {
-  border: 1px solid var(--blue);
-  width: 5rem;
+
+#about hr, #resume hr {
+  width: 7rem;
   margin-left: 1rem;
   margin-bottom: 4rem;
 }
@@ -223,8 +227,6 @@ hr {
 }
 #review, #expertise {width: 30%;}
 #personal-info {width: 40%;}
-
-#expertise hr {margin-bottom: 1.5rem;}
 #expertise p {padding-bottom: 0; text-transform: none;}
 
 #info {
@@ -283,6 +285,12 @@ hr {
   align-items: center;
   text-align: center;
 }
+.section-text hr {
+  margin: auto;
+  width: 12rem;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+}
 #resume-text {
   display: flex;
   flex-direction: row;
@@ -292,7 +300,6 @@ hr {
   width: 30%;
   padding: 2rem;
 }
-#education hr, #experience hr{margin-bottom: 3.5rem;}
 #education h1, #experience h1 {
   padding: 1rem;
   font-weight: bold;
@@ -325,26 +332,20 @@ dd {
 }
 
 /* third text */
-#skills-services {
+#skills, #services {
   width: 90%;
   margin: auto;
   text-align: center;
 }
-#skills-services hr, .section-text hr {
-  border: 1px solid var(--blue);
-  width: 8rem;
-  margin: auto;
-  margin-bottom: 4rem;
-  margin-top: 2rem;
-}
-#skills-services h1, .section-text h1 {
+#skills h1, #services h1, .section-text h1 {
   letter-spacing: 0.2rem;
   word-spacing: 0.5rem;
 }
-#skills-services h3, .section-text h3 {
+#skills h1, #services h3, .section-text h3 {
   letter-spacing: 0.1rem;
   word-spacing: 0.3rem;
   padding: 1rem;
+  margin: auto;
   margin-bottom: 2rem;
 }
 .skills-details {
@@ -369,11 +370,10 @@ dd {
   text-transform: capitalize;
 }
 .skill-imgs{
-  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  height: 15rem;
 }
 .skill-imgs img {
   width: 11rem;
@@ -381,22 +381,24 @@ dd {
   object-fit: scale-down;
 }
 .skill-description {
-  display: none;
   font-size: 2rem;
   text-align: center;
-  width: 90%;
+  padding: 0 3rem;
+  transform: translate(0,15rem);
+}
+.skill-detail:hover .skill-imgs {
+  transform: translate(0,-4rem);
+  transition: all 0.5s ease-in-out;
 }
 .skill-detail:hover .skill-description {
-  display: block;
   margin: auto;
-  margin-top: 2rem;
-  transition: all 0.3s ease-in-out;
+  transform: translateZ(-15rem);
+  transition: all 0.5s ease-in-out;
 }
 .skill-detail:hover h3 {
-  font-size: 3rem;
-  margin: 0 !important;
-  transition: all 0.3s ease-in-out;
-  letter-spacing: 0.9rem;
+  transform: translate(0,-10rem);
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
 }
 .growth-mindset {
   padding: 5rem 10rem;
@@ -406,10 +408,6 @@ dd {
   height: 30rem;
   justify-content: center;
   align-items: center;
-}
-#service-text h3 {
-  width: 50%;
-  margin: auto;
 }
 .growth-mindset h3{
   color: var(--light);
@@ -428,18 +426,17 @@ dd {
   padding : 4rem 0;
   border: 3px solid var(--light-blue);
 }
-
 .service-detail h3 {font-size: 2.7rem;}
 .service-detail:hover{
   background-color: var(--light-blue);
   border-color: var(--light);
-  transition: all 0.3s !important;
+  transition: all 0.5s !important;
 }
 .service-imgs {
   width: 18rem;
   height: 18rem;
 }
-.filter-nav-portfolio {
+#filter-nav-portfolio {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -450,7 +447,8 @@ dd {
   background-color: var(--light);
   color: var(--dark);
   border: 1px solid var(--light-blue);
-  border-radius: 2rem;
+  border-radius: 0.5rem;
+  padding: 1.25rem 2.75rem;
   margin: 4rem 1rem;
 }
 .filter-link:hover {
@@ -466,7 +464,15 @@ dd {
   align-items: center;
   flex-wrap: wrap;
 }
-.portfolio-product {
+.all {
   width: 30%;
   padding: 2rem;
+  display: none;
+}
+.show {
+  display: block;
+}
+.active {
+  background-color: var(--light-blue);
+  color: var(--light);
 }

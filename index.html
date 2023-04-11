@@ -7,11 +7,10 @@
     <title>Timw's Portfolio</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/vendors/themify-icons/css/themify-icons.css" />
-    <script src="./assets/js/main.js"></script>
+
   </head>
 
   <body>
-    <!-- header -->
     <header id="home">
       <nav class="icon-contacts">
         <a class="ti-facebook" href="https://www.facebook.com/timw.0512" target="_blank"></a>
@@ -34,14 +33,13 @@
         </a>
       </div>
     </header>
-    <!-- end-header -->
-    
     <!-- moving-nav sticky with body -->
     <nav id="main-nav">
       <div id="nav-left">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#resume">Resume</a>
+        <a href="#skills">Skills</a>
         <!-- <a href="">Empty</a> -->
       </div>
       <!-- brand, where img -> text when on top -->
@@ -54,8 +52,9 @@
       </div>
       <div id="nav-right">
         <!-- <a href="#service">Service</a> -->
-        <a href="#skills-services">Skill</a>
+        <a href="#services">Services</a>
         <a href="#portfolio">Portfolio</a>
+        <a href="#blogs">Blogs</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
@@ -63,7 +62,6 @@
 
     <!-- begin container -->
 
-    <!-- about -->
     <section id="about">
       <div class="text-on-text">
         <span class="text-bg txt-upper">about</span>
@@ -117,7 +115,7 @@
               <span id="address">381 nguyen khang, ha noi, viet nam</span>
             </p>
             <p class="info-flex-child">
-              <span class="title">freelance:</span>
+              <span class="title">job:</span>
               <span id="status_job">available</span>
             </p>
           </div>
@@ -164,8 +162,6 @@
       </div>
     </section>
 
-    <!-- end-about -->
-    <!-- resume -->
     <section id="resume">
       <div class="text-on-text">
         <span class="text-bg">resume</span>
@@ -253,85 +249,87 @@
         </div>
       </div>
     </section>
-    <!-- end resume -->
-    <section id="skills-services">
+
+    <section id="skills">
       <div class="text-on-text">
         <span class="text-bg">quality</span>
         <span class="text-mask">skills & services</span>
       </div>
-      <div id="skills">
-        <div class="section-text txt-cap">
-          <h3>Skills</h3>
-          <h1>Why Choose Me</h1>
-          <hr>
-        </div>
-        <div class="skills-details">
-          <div class="skill-detail" id="skill-now">
-            <h3>Now Working</h3>
-            <div class="skill-imgs">
-              <img src="./assets/imgs/html.png" alt="html">
-              <img src="./assets/imgs/css.png" style="height: 13rem; width: 13rem;" alt="css"> 
-              <img src="./assets/imgs/js.png" alt="js">
-            </div>
-            <div class="skill-description" id="">
-              <p>Although my knowledge comes from self-study, I am confident with that, they will be proven through my products below. If you need to know more about other certifications or products, contact me.</p>
-            </div>
-          </div>   
-          <div class="skill-detail" id="skill-pre">
-            <h3>Used Before</h3>
-            <div class="skill-imgs">
-              <img src="./assets/imgs/icons-logos/c++.png" alt="">
-              <img src="./assets/imgs/icons-logos/py.png" alt="">
-              <img src="./assets/imgs/icons-logos/csad.png" alt="">
-              <img src="./assets/imgs/icons-logos/sql.png" alt="">
-            </div>
-            <div class="skill-description" id="">
-              <p>Additional knowledge I have learned at university such as building automation applications with C# - SQL and PLC,...</p>
-            </div>
-          </div>
-          <div class="skill-detail" id="skill-next">
-              <h3>Studying</h3>
-              <div class="skill-imgs">
-                <a href="https://commons.wikimedia.org/wiki/File:Typescript_logo_2020.svg">\
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" alt="">
-                </a>
-                <img src="./assets/imgs/angular.png" style="height: 13rem; width: 13rem;" alt="angularjs">
-                <img src="./assets/imgs/react.png" alt="reactjs">
-                <img src="./assets/imgs/seo.png" alt="seoskill" style="height: 13rem; width: 10rem;">
-              </div>
-              <div class="skill-description" id="">
-                <p>Some of my personal development orientations in the near future.
-                  Right now, I'm up for the challenge with them.</p>
-              </div>
-          </div>
-          <div class="skill-detail">
-            <h3>More</h3>
-              <img src="./assets/imgs/ect-skill.webp" style="width: 70%; height: 15rem; object-fit: fill;" alt="more">
-            <div class="skill-description" id="">
-              <p>Many other skills that support building website interfaces such as design, editing, other soft skills...</p>
-            </div>
-          </div>
-          <div class="growth-mindset">
-            <h3>"Besides the development orientations set out, if you have any other requirements, 
-              I am willing to try my hand in many other directions such as tester, back-end dev,... 
-              For me, studying is always an important and meaningful thing.
-              Upgrading myself with new knowledge in new environments is an exciting journey in my life.<br>
-              It would be great if we could be together on that journey."
-            </h3>  
-            <a href="mailto:timw051201@gmail.com" target="_blank">
-              <button class="btn-hire-me">Hire me now!</button>
-            </a>
-          </div>
-        </div>
-
+      <div class="section-text txt-cap">
+        <h3>Skills</h3>
+        <h1>Why Choose Me<hr></h1>
       </div>
-      <div id="services">
-        <h3>Services</h3>
-        <h1>What I Do</h1>
-        <hr>
-        <div id="service-text">
-          <h3>Working as a Front-end website developer now, app developer will be updated more in the future with React.</h3>
+      <div class="skills-details">
+        <div class="skill-detail" id="skill-now">
+          <h3>Now Working</h3>
+          <div class="skill-imgs">
+            <img src="./assets/imgs/html.png" alt="html">
+            <img src="./assets/imgs/css.png" style="height: 13rem; width: 13rem;" alt="css"> 
+            <img src="./assets/imgs/js.png" alt="js">
+          </div>
+          <div class="skill-description" id="">
+            <p>Although my knowledge comes from self-study, I am confident with that, they will be proven through my products below. If you need to know more about other certifications or products, contact me.</p>
+          </div>
+        </div>   
+        <div class="skill-detail" id="skill-pre">
+          <h3>Used Before</h3>
+          <div class="skill-imgs">
+            <img src="./assets/imgs/icons-logos/c++.png" alt="">
+            <img src="./assets/imgs/icons-logos/py.png" alt="">
+            <img src="./assets/imgs/icons-logos/csad.png" alt="">
+            <img src="./assets/imgs/icons-logos/sql.png" alt="">
+          </div>
+          <div class="skill-description" id="">
+            <p>Additional knowledge I have learned at university such as building automation applications with C# - SQL and PLC,...</p>
+          </div>
         </div>
+        <div class="skill-detail" id="skill-next">
+            <h3>Studying</h3>
+            <div class="skill-imgs">
+              <a href="https://commons.wikimedia.org/wiki/File:Typescript_logo_2020.svg">\
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" alt="">
+              </a>
+              <img src="./assets/imgs/angular.png" style="height: 13rem; width: 13rem;" alt="angularjs">
+              <img src="./assets/imgs/react.png" alt="reactjs">
+              <img src="./assets/imgs/seo.png" alt="seoskill" style="height: 13rem; width: 10rem;">
+            </div>
+            <div class="skill-description" id="">
+              <p>Some of my personal development orientations in the near future.
+                Right now, I'm up for the challenge with them.</p>
+            </div>
+        </div>
+        <div class="skill-detail">
+          <h3>More</h3>
+          <div class="skill-imgs">
+            <img src="./assets/imgs/ect-skill.webp" style="width: 70%; height: 15rem; object-fit: fill;" alt="more">
+          </div>
+          <div class="skill-description" id="">
+            <p>Many other skills that support building website interfaces such as design, editing, other soft skills...</p>
+          </div>
+        </div>
+        <div class="growth-mindset">
+          <h3>"Besides the development orientations set out, if you have any other requirements, 
+            I am willing to try my hand in many other directions such as tester, back-end dev,... 
+            For me, studying is always an important and meaningful thing.
+            Upgrading myself with new knowledge in new environments is an exciting journey in my life.<br>
+            It would be great if we could be together on that journey."
+          </h3>  
+          <a href="mailto:timw051201@gmail.com" target="_blank">
+            <button class="btn-hire-me">Hire me now!</button>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="services">
+      <div class="text-on-text">
+        <span class="text-bg">quality</span>
+        <span class="text-mask">skills & services</span>
+      </div>
+        <div class="section-text txt-cap">
+          <h3>Services</h3>
+          <h1>What I Do<hr></h1>
+        </div>
+        <h3 style="width:50%;margin:auto;">Working as a Front-end website developer now, app developer will be updated more in the future with React and more.</h3>
         <div id="service-details">
           <div class="service-detail">
             <h3>Web Development</h3>
@@ -344,7 +342,6 @@
             <p></p>
           </div>
         </div>
-      </div>
     </section>
     <section id="portfolio">
       <div class="text-on-text">
@@ -353,41 +350,46 @@
       </div>
       <div class="section-text txt-cap">
         <h3>What I Did</h3>
-        <h1>Check My Wonderful Works</h1>
-        <hr>
+        <h1>Check My Wonderful Works<hr></h1>
       </div>
-      <div class="filter-nav-portfolio">
-        <button  class="filter-link">All</button>
-        <button id="filter-web-dev" class="filter-link">Web Development</button>
-        <button id="filter-web-des" class="filter-link">Web Design</button>
-        <button id="filter-app-dev" class="filter-link">App Development</button>
+      <div id="filter-nav-portfolio">
+        <button class="filter-link active" onclick="filterSelection('all')">All</button>
+        <button class="filter-link" onclick="filterSelection('web-dev')">Web Development</button>
+        <button class="filter-link" onclick="filterSelection('web-des')">Web Design</button>
+        <button class="filter-link" onclick="filterSelection('app-dev')">App Development</button>
       </div>
       <div id="portfolio-containers">
-        <div class="portfolio-product all web-des">
+        <div class="all web-dev">
           <a href="linktoproduct">
             <img class="" src="./assets/imgs/portfolio.png" alt="portfolio-1">
           </a>
           <p class="portfolio-description">Watch with Pomodoro mode and the others</p>
         </div>
-        <div class="portfolio-product all web-des">
+        <div class="all web-des">
           <a href="linktoproduct">
             <img class="" src="./assets/imgs/portfolio.png" alt="portfolio-1">
           </a>
           <p class="portfolio-description">Watch with Pomodoro mode and the others</p>
         </div>
-        <div class="portfolio-product all web-des">
+        <div class="all app-dev">
           <a href="linktoproduct">
             <img class="" src="./assets/imgs/portfolio.png" alt="portfolio-1">
           </a>
           <p class="portfolio-description">Watch with Pomodoro mode and the others</p>
         </div>
-        <div class="portfolio-product all web-des">
+        <div class="all web-des">
           <a href="linktoproduct">
             <img class="" src="./assets/imgs/portfolio.png" alt="portfolio-1">
           </a>
           <p class="portfolio-description">Watch with Pomodoro mode and the others</p>
         </div>
-        <div class="portfolio-product all web-des">
+        <div class="all web-dev">
+          <a href="linktoproduct">
+            <img class="" src="./assets/imgs/portfolio.png" alt="portfolio-1">
+          </a>
+          <p class="portfolio-description">Watch with Pomodoro mode and the others</p>
+        </div>
+        <div class="all web-des">
           <a href="linktoproduct">
             <img class="" src="./assets/imgs/portfolio.png" alt="portfolio-1">
           </a>
@@ -403,4 +405,5 @@
       <div id="about-text"></div>
     </section>
   </body>
+  <script src="./assets/js/main.js"></script>
 </html>
