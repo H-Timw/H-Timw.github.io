@@ -1,7 +1,7 @@
 :root {
   --avt-size: 18rem;
   --blue: rgb(0, 0, 255);
-  --light-blue: deepskyblue;
+  --light-blue: rgb(0, 191, 255);
   --normal-blue: dodgerblue;
   --light: white;
   --dark: black;
@@ -71,14 +71,21 @@ html {
   font-size: 62.5%;
   font-family: "Dosis", sans-serif;
 }
-
-body {position: relative;}
+body::-webkit-scrollbar {
+  display: none;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+}
+body {position: relative;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  /* Hide scrollbar for IE, Edge and Firefox */
+}
 header {
   background-image: linear-gradient(to top, white 0%, deepskyblue 90%,  dodgerblue 100%);
   background-repeat: no-repeat;
-  height: 79vh;
+  height: 80vh;
   min-height: 40rem; /*Đảm bảo nav không bị co lên qua nhieu khi có extension/ dev tool làm ảnh hưởng chiều dọc màn hình*/
-  padding-top: 2rem;
+  padding-top: 6rem;
 }
 header .icon-contacts {margin-left: 12rem;}
 header .icon-contacts a {
@@ -193,6 +200,7 @@ header .icon-contacts a:visited {color: var(--light);}
 section {
   padding-top: 10rem;
   width: 90%;
+  margin: auto;
 }
 hr {
   background-color: var(--blue);
@@ -200,7 +208,6 @@ hr {
 }
   /* first-section */
 #about {
-  margin: auto;
   margin-bottom: 0 !important;}
 #about hr, #resume hr {
   width: 7rem;
@@ -382,16 +389,16 @@ dd {
   transform: translate(0,15rem);
 }
 .skill-detail:hover .skill-imgs {
-  transform: translate(0,-4rem);
+  transform: translate(0,-6rem);
   transition: all 0.5s ease-in-out;
 }
 .skill-detail:hover .skill-description {
   margin: auto;
-  transform: translateZ(-15rem);
+  transform: translate(0,-3rem);
   transition: all 0.5s ease-in-out;
 }
 .skill-detail:hover h3 {
-  transform: translate(0,-10rem);
+  transform: translate(0,-15rem);
   visibility: hidden;
   transition: all 0.5s ease-in-out;
 }
@@ -436,7 +443,6 @@ dd {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  
 }
 .filter-link {
   background-color: var(--light);
@@ -456,7 +462,7 @@ dd {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
 }
 .portfolio-description {
@@ -465,6 +471,10 @@ dd {
   width: 70%;
   margin: auto;
   font-weight: bold;
+}
+.portfolio-description a {
+  text-decoration: underline;
+  color: var(--light-blue);
 }
 .all {
   width: 30%;
@@ -489,5 +499,47 @@ dd {
   width: 30%;
 }
 .blog-content-img {
-
+  height: 40rem;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.blog-title {
+  text-transform: capitalize;
+  padding: 1rem;
+}
+.blog-writer {
+  padding: 1rem;
+}
+.blog-writer a {
+  padding: 0 1rem;
+  color: black;
+  font-weight: bold;
+}
+.portfolio-imgs {
+  position: relative;
+  text-align: center;
+  transition: all 0.5s !important;
+}
+.portfolio-description-overlay {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: var(--light);
+  background-color: rgba(0, 191, 255,0.8);
+  width: 70%;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  border-radius: 5px;
+  transform: scale(0);
+  display: none;
+  transition: all 2s !important;
+}
+.portfolio-imgs:hover .portfolio-description-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 2s !important;
 }
